@@ -12,6 +12,7 @@
     "vue": "^2.6.11",
     "vue-js-modal": "^2.0.0-rc.3",
     "vue-router": "^3.2.0",
+    "vuetify": "^2.3.16",
     "vuex": "^3.4.0"
   },
   "devDependencies": {
@@ -41,5 +42,17 @@
     "> 1%",
     "last 2 versions",
     "not dead"
-  ]
+  ],
+  "description": "## Project setup ``` yarn install ```",
+  "main": "babel.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gonbee-audio/myportfolio-profile.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gonbee-audio/myportfolio-profile/issues"
+  },
+  "homepage": "https://github.com/Gonbee-audio/myportfolio-profile#readme"
 }

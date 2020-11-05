@@ -9,17 +9,13 @@
             </div>
   </transition-group> 
 
-  <div class="afterCareer"><h2>2019年12月の後半おかげさまでインターンを獲得しました！！</h2><br>
-  しかし、コロナ不況の煽りをうけ2020年5月にクビになりました。<br>なのでインターンで学んだ知識を使い
-  新たに学んだ知識を使ってポートフォリオをリメイクしました。<br><h3>今回使った技術</h3><br>
-  <ul>
-    <li>html</li>
-    <li>css</li>
-    <li>javascript(vue.js)</li>
-    <li>docker</li>
-    <li>aws</li>
-  </ul>
-  </div>
+  <v-card class="afterCareer">
+    <v-card-title>開発に使ったスキル</v-card-title><br>
+    <v-card-text>html</v-card-text><br>
+    <v-card-text>css</v-card-text><br>
+    <v-card-text>javascript(vue.js)</v-card-text><br>
+    <v-card-text>aws ec2</v-card-text><br>
+  </v-card>
           
 
 
@@ -123,5 +119,8 @@ export default {
     border: 1px solid;
     display: inline-block;
     text-align: center;
+}
+li {
+  margin-bottom: 0.5em;
 }
 </style>

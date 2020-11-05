@@ -1,7 +1,7 @@
 <template>
 <div>
-    <div v-for="photo of portFolioPhotos" :key="photo.title" class="portfolioHistoryFrame">
-        <img :src="photo.image" width="100%" height="100%">
+    <div v-for="photo of portFolioPhotos" :key="photo.title" >
+      <a :href="photo.url" ><img :src="photo.image" class="portfolioHistoryFrame" width="100%" height="100%"></a>
     </div>
 </div>
 
@@ -34,13 +34,9 @@ export default {
             portFolioPhotos:[
         {
 		title: '写真タイトル01',
-		image: 'images/photo_01.jpg',
-		image_thumb: 'images/photo_01_thumb.jpg',
-	},
-	{
-		title: '写真タイトル02',
-		image: 'images/photo_02.jpg',
-		image_thumb: 'images/photo_02_thumb.jpg',
+		image: '/images/photo_01.jpg',
+        image_thumb: 'images/photo_01_thumb.jpg',
+        url: 'http://ec2-54-249-173-228.ap-northeast-1.compute.amazonaws.com/Django/Login/?next=/Django/',
 	},
     ]
         }
@@ -53,9 +49,8 @@ export default {
     border: 1px solid;
     display:inline-block;
     position: relative;
-    width: 10%;
-    height: 30%;
-    padding: 10%;
+    width: 30%;
+    height: 10%;
     margin-top: 2%;
     margin-left: 7.5%;
     margin-right: 7.5%;
