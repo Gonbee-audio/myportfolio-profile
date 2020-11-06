@@ -1,5 +1,8 @@
 <template>
-<div>       
+<v-container>  
+<!--main page-->
+
+  <h2>Career</h2>     
   <transition-group name="modalCareerAppear">
             <div 
             class="textFrameAction && careerModalButton" 
@@ -9,6 +12,7 @@
             </div>
   </transition-group> 
 
+<!-- made after portfolio history-->
   <v-container>
     <v-card>
         <v-card-title>ポートフォリオの履歴</v-card-title>
@@ -17,7 +21,9 @@
         <v-card-text style="text-align:left;">2020年11月 ポートフォリオと呼ぶには杜撰(ずさん)いうことでvuetifyを使ってテコ入れ</v-card-text>
     </v-card>
   </v-container>
+<!-- end made after portfolio history-->
 
+<!-- pull dialog  method button-->
   <v-card class="afterCareer" style="margin-bottom:10%;">
   <div class="text-center">
     <v-dialog
@@ -33,12 +39,14 @@
           v-bind="attrs"
           v-on="on"
         >
-         <v-card-title>このポートフォリオの開発に使ったスキル</v-card-title>
+            <v-card-title>このポートフォリオの開発に使ったスキル</v-card-title>
         </v-btn>
         </v-card>
       </template>
+<!-- end pull dialog  method button-->
+<!-- end main page-->
       
-
+<!--dialog Page-->
       <v-card>
         <v-card-title class="headline grey lighten-2">
           このポートフォリオの開発に使ったスキル
@@ -60,7 +68,7 @@
             </v-card-text><br>
             <v-card-subtitle>javascript(vue.js)</v-card-subtitle>
             <v-card-text>
-              素のjavascriptは使わずにほとんどvueを使っています
+              素のjavascriptは使わずにほとんどvueを使っています。デザインはvuetifyで書いてます。
             </v-card-text><br>
             <v-card-subtitle>aws ec2</v-card-subtitle>
             <v-card-text>
@@ -81,6 +89,7 @@
           </v-btn>
         </v-card-actions>
       </v-card>
+  <!-- end dialog page-->
   </v-dialog>
   </div>
   </v-card>
@@ -91,7 +100,7 @@
                 <CareerModal></CareerModal>
                 </div>
               </modal>
-</div>
+</v-container>
 </template>
 
 

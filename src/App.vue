@@ -20,6 +20,7 @@
       color="blue lighten-4"
       style="z-index: 11;"
     >
+
 <!-- menu-->
     <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
 
@@ -72,6 +73,9 @@
             </v-col>
             
         </v-navigation-drawer>
+<!--end title bar-->
+
+<!--end menu-->
         <v-app-bar 
         style="position: fixed;
                z-index: 10;"
@@ -105,7 +109,7 @@
         </v-btn>
       </v-card-text>
 
-
+<!-- footer icon-->
   <v-row justify="space-around">
     <a href="https://note.com/gonbee123audio">
     <v-icon
@@ -143,6 +147,9 @@
     </v-icon>
     </a>
   </v-row>
+<!--end footer icon-->
+
+<!-- footer text-->
       <v-card-text class="black--text pt-0">
         facebookはやっていないので代わりにnoteのマイアカウントのページ、qiitaのアイコンがないので一番右のアイコンはqiitaのurlになっています。その中にtwitterはつながります。githubはこのサイトのgithubのページに飛ぶように設定しています。
       </v-card-text>
@@ -151,7 +158,9 @@
 
       <v-card-text class="black--text">
         {{ new Date().getFullYear() }} — <strong>Vuetify</strong>
-      </v-card-text>
+      </v-card-text> 
+<!-- end footer text-->
+
     </v-card>
   </v-footer>
 
@@ -267,7 +276,7 @@ export default {
   margin-left: 42.5%;
 }
 .backGroundView{
-    position: absolute;
+    position: fixed;
     font-size: 500%;
     left: 20%;
     bottom: 50%;

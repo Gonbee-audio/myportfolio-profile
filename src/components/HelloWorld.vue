@@ -1,5 +1,7 @@
 <template>
   <v-container>
+  <h2>MyPage</h2>
+  <!--main page-->
         <transition-group>
           <div
             v-for="element in proflie"  
@@ -37,6 +39,7 @@
           </div>
         </transition-group>
   </v-container>
+<!-- end main page-->
 </template>
 
 <script>

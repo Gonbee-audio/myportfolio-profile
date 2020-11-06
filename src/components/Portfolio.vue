@@ -1,19 +1,25 @@
 <template>
 <div>
   <v-container>
-    <v-sheet>
-      <v-card-text><h2>Portfolio</h2></v-card-text>
-    </v-sheet>
+      <h2>Portfolio</h2>
   <v-carousel v-model="model">
     <v-carousel-item
       v-for="photo in portFolioPhotos"
       :key="photo"
     >
-    <a :href="photo.url" >
+    <v-dialog
+      v-model="dialog"
+      persistent
+      max-width="290"
+      >
+      <!-- push fire dialog button-->
+      <template v-slot:activator="{ on, attrs }">
       <v-img
         :src="photo.image"
         height="100%"
         tile
+        v-bind="attrs"
+        v-on="on"
       >
       
           <v-row
@@ -23,7 +29,44 @@
           >
           </v-row>
         </v-img>
-      </a>
+      </template>
+      <!--end push fire dialog button-->
+
+      <!-- portfolio detail-->
+            <v-card>
+        <v-card-title class="headline">
+          slack風チャットアプリ
+        </v-card-title>
+        <v-card-text>
+            <v-img
+                :src="photo.image"
+                height="100%"
+                tile
+                >
+            </v-img>
+        </v-card-text>
+        <v-card-text>djangoとvueを使ったアプリケーション。レスポンシブ化するにあたって、フロント部分を作ろうとして一からリメイク中。<br>
+        現在spa化するために色々模索しています。その中で未経験がまず触らないだろうdjango channelsというリアルタイムチャット機能を実装できるライブラリを使おうと色々頑張っています。</v-card-text>
+        <v-card-actions>
+          <v-spacer></v-spacer>
+          <v-btn
+            color="green darken-1"
+            text
+            @click="dialog = false"
+          >
+            戻る
+          </v-btn>
+          <a :href="photo.url"><v-btn
+            color="green darken-1"
+            text
+            @click="dialog = false"
+          >
+            進む
+          </v-btn></a>
+        </v-card-actions>
+        </v-card>
+        <!--end portfolio detail-->
+      </v-dialog>
       </v-carousel-item>
     </v-carousel>
   </v-container>
@@ -66,6 +109,7 @@ export default {
     name: 'Portfolio',
     data(){
         return{
+            dialog: false,
             portFolioPhotos:[
         {
 		title: '写真タイトル01',

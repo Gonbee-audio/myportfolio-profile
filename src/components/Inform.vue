@@ -1,5 +1,6 @@
 <template>
-<div>
+<v-container>
+<h2>Inform</h2>
 <div class="above">
     <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
   <h3>私のツイッター↓</h3>
@@ -15,7 +16,7 @@
                 </div>
               </modal>
 </div>
-</div>
+</v-container>
 
 
 </template>
