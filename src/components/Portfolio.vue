@@ -2,7 +2,10 @@
 <div>
   <v-container>
       <h2>Portfolio</h2>
-  <v-carousel v-model="model">
+  <v-carousel 
+  v-model="model"
+  style="margin-bottom:10%;"
+  >
     <v-carousel-item
       v-for="photo in portFolioPhotos"
       :key="photo"
@@ -34,9 +37,9 @@
 
       <!-- portfolio detail-->
             <v-card>
-        <v-card-title class="headline">
-          slack風チャットアプリ
-        </v-card-title>
+                <v-card-title class="headline">
+                  slack風チャットアプリ
+                </v-card-title>
         <v-card-text>
             <v-img
                 :src="photo.image"
